@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import Nav from "../Nav";
 import "../style.css";
-import CardContext from "./CardProvider";
 
 function Order() {
   // const orderContext = useEffect(CardContext);

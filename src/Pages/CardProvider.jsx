@@ -3,7 +3,6 @@ const CardContext = React.createContext();
 
 export const CardProvider = ({ children }) => {
   const [add, setadd] = useState([]);
-  let index;
 
   let addtoCard = (products) => {
     var findProducts = add.find((d) => {

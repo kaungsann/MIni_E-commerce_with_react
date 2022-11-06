@@ -16,7 +16,7 @@ body {
 }
 .loadbox {
   width: 5%;
-  margin: 200px auto;
+  margin: 300px auto;
 }
 
 .cardbox {
@@ -72,7 +72,7 @@ thead {
 }
 table {
   background-color: black;
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
   margin-top: 30px;
 }
@@ -87,4 +87,7 @@ table {
 }
 .buttong {
   width: 20%;
+}
+.inputcontainer {
+  margin-top: 450px;
 }

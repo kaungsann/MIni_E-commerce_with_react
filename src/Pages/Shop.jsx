@@ -7,7 +7,7 @@ import CardContext from "./CardProvider";
 const Shop = () => {
   const [data, setdata] = useState([]);
   const [loader, setloader] = useState(true);
-  const cardRef = React.createRef();
+
   const addCard = useContext(CardContext);
 
   useEffect(() => {

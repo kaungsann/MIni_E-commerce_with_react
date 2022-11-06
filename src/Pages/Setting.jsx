@@ -1,16 +1,18 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Nav from "../Nav";
 import CardContext from "./CardProvider";
+
 export default function Setting() {
-  var count = 0;
-  var buyContext = useContext(CardContext);
+  let totalPrice = 0;
+  let count = 0;
+  const buyContext = useContext(CardContext);
   console.log(buyContext);
   var reduceBtn = (item) => {
     console.log(item);
 
     item.quantity -= 1;
     if (item.quantity === 0) {
-      item.splice(1, 2);
+      return;
     }
   };
   const addNum = (item) => {
@@ -37,6 +39,8 @@ export default function Setting() {
         <tbody className="text-dark">
           <>
             {buyContext.add.map((d) => {
+              totalPrice += d.price * d.quantity;
+
               return (
                 <tr className="tabeld" key={d.id}>
                   <td>{(count += 1)}</td>
@@ -67,10 +71,14 @@ export default function Setting() {
               );
             })}
           </>
-          <td colSpan="5" className="total">
-            Total
-          </td>
-          <td className="price">${}</td>
+          {buyContext.add.length > 0 ? (
+            <>
+              <td colSpan="6" className="total">
+                Total
+              </td>
+              <td className="price">{totalPrice}$</td>
+            </>
+          ) : null}
         </tbody>
       </table>
     </>

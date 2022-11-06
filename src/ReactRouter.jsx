@@ -4,6 +4,9 @@ import Home from "./Pages/Home";
 import Shop from "./Pages/Shop";
 import Order from "./Pages/Order";
 import Setting from "./Pages/Setting";
+import PageNotFound from "./Pages/PageNotFound";
+import Login from "./Pages/Login";
+
 export default function ReactRouter() {
   return (
     <>
@@ -11,18 +14,24 @@ export default function ReactRouter() {
         <Route exact path="/">
           <Home />
         </Route>
-      </Switch>
-      <Switch>
-        <Route exact path="/shop">
+
+        <Route path="/shop">
           <Shop />
         </Route>
-      </Switch>
-      <Switch>
-        <Route exact path="/order">
+
+        <Route path="/order">
           <Order />
         </Route>
-        <Route exact path="/setting">
+        <Route path="/setting">
           <Setting />
+        </Route>
+
+        <Route path="/login">
+          <Login />
+        </Route>
+
+        <Route path="*">
+          <PageNotFound />
         </Route>
       </Switch>
     </>
