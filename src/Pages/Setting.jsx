@@ -23,8 +23,8 @@ export default function Setting() {
     <>
       <Nav />
 
-      <table className=" ">
-        <thead className="text-white">
+      <table className=" table table-striped ">
+        <thead className="text-black bgcolor">
           <tr className="tableh">
             <th>No</th>
             <th>Date</th>
@@ -36,7 +36,7 @@ export default function Setting() {
             <th className="buttong">Option</th>
           </tr>
         </thead>
-        <tbody className="text-dark">
+        <tbody className="text-dark ">
           <>
             {buyContext.add.map((d) => {
               totalPrice += d.price * d.quantity;

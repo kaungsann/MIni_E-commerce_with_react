@@ -1,31 +1,36 @@
-import React, { Fragment, useState, useRef } from "react";
+import React, { Fragment, useState, useRef, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../style.css";
-
+import icons from "../img/images.png";
+import LoginContext from "../LoginProvider";
 const Login = () => {
-  const goto = useHistory();
-  let name = true;
-  let email = true;
-  let password = true;
+  let [name, setname] = useState(true);
+  let [email, setemail] = useState(true);
+  const [password, setpassword] = useState(true);
+
   const [disabled, setdisabled] = useState(true);
 
   const nameRef = useRef();
   const emailRef = useRef();
   const passRef = useRef();
   const btnRef = useRef();
+  const history = useHistory();
+  const loginData = useContext(LoginContext);
 
   const inputName = (e) => {
     let nameValue = e.target.value;
     let valid = /^[a-zA-Z0-9\s]+$/;
     if (valid.test(nameValue)) {
-      name = true;
-      nameRef.current.classList.remove("is-invalid");
-    } else {
-      name = false;
+      setname(true);
 
+      nameRef.current.classList.remove("is-invalid");
+      nameRef.current.classList.add("innvalid");
+    } else {
+      setname(false);
       nameRef.current.classList.add("is-invalid");
+
       console.log("error");
     }
     checkValid();
@@ -35,14 +40,16 @@ const Login = () => {
     let emailValue = e.target.value;
     let validEmail = /^([a-z0-9\_\-]+)@([a-z]+)\.([a-z]{2,5})$/;
     if (validEmail.test(emailValue)) {
-      email = true;
-      console.log(emailRef);
+      setemail(true);
 
+      console.log(emailRef);
+      emailRef.current.classList.add("innvalid");
       emailRef.current.classList.remove("is-invalid");
     } else {
-      email = false;
+      setemail(false);
 
       console.log("error");
+
       emailRef.current.classList.add("is-invalid");
     }
     checkValid();
@@ -53,11 +60,12 @@ const Login = () => {
     let pasvalid = /^[a-zA-Z0-9\W]{6,20}$/;
 
     if (pasvalid.test(passwordValue)) {
-      password = true;
+      setpassword(true);
 
+      passRef.current.classList.add("innvalid");
       passRef.current.classList.remove("is-invalid");
     } else {
-      password = false;
+      setpassword(false);
 
       passRef.current.classList.add("is-invalid");
     }
@@ -65,35 +73,54 @@ const Login = () => {
   };
 
   const checkValid = () => {
-    if (name || email || password) {
+    if (name && email && password) {
       setdisabled(false);
     }
   };
 
   const login = (e) => {
+    console.log("hello");
     e.preventDefault();
-    if (name && email && password) {
-      goto.push("/");
-    } else {
-      toast("You need to still enter valid", {
-        theme: "dark",
-      });
+    if (!name || !email || !password) {
+      toast("Something is wrong pls check it !");
+    }
+    if (
+      nameRef.current.value.length === 0 ||
+      emailRef.current.value.length === 0 ||
+      passRef.current.value.length === 0
+    ) {
+      toast("You need cto enter fill the text");
+    }
+    if (
+      nameRef.current.classList.contains("innvalid") &&
+      emailRef.current.classList.contains("innvalid") &&
+      passRef.current.classList.contains("innvalid")
+    ) {
+      console.log(" you are login successfully");
+      console.log(history);
+      history.push("/home");
+      let jsonData = {
+        name: nameRef.current.value,
+        email: emailRef.current.value,
+        password: passRef.current.value,
+      };
+      let convertJson = JSON.stringify(jsonData);
+      window.localStorage.setItem("valid", convertJson);
     }
   };
-  // React.useEffect(() => {
-  //   toast("welcome our login");
-  // }, []);
+
   return (
     <Fragment>
       <ToastContainer />
-      <div className="inputcontainer col-md-3 d-flex flex-column justify-content-center align-items-center mx-auto mt-5">
-        <h2 className="text-secondary mb-4 mt-4">Ecommerence Website</h2>
+      <h3 className="shoptitle">KK Shopping</h3>
+      <div className="inputcontainer col-md-3 d-flex flex-column justify-content-center align-items-center mx-auto p-5 bg-white">
+        <img src={icons} className="icons" />
         <div className="col-md-12">
           <input
             ref={nameRef}
             type="text"
             className={`form-control mt-4 ${
-              name ? null : "border border-3 border-danger"
+              name ? "" : "border border-3 border-danger"
             }`}
             placeholder="Username"
             onChange={inputName}

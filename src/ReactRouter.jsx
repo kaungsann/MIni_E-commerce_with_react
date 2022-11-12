@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import Home from "./Pages/Home";
 import Shop from "./Pages/Shop";
 import Order from "./Pages/Order";
@@ -12,6 +12,9 @@ export default function ReactRouter() {
     <>
       <Switch>
         <Route exact path="/">
+          <Redirect to="/login"></Redirect>
+        </Route>
+        <Route exact path="/home">
           <Home />
         </Route>
 

@@ -1,13 +1,20 @@
-import React, { Fragment, useEffect, useState, useContext } from "react";
+import React, {
+  Fragment,
+  useEffect,
+  useState,
+  useContext,
+  useRef,
+} from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import Nav from "../Nav";
 import "../style.css";
 import axios from "axios";
 import CardContext from "./CardProvider";
+
 const Shop = () => {
   const [data, setdata] = useState([]);
   const [loader, setloader] = useState(true);
-
+  const textRef = useRef();
   const addCard = useContext(CardContext);
 
   useEffect(() => {
@@ -17,6 +24,16 @@ const Shop = () => {
       setloader(false);
     });
   }, []);
+
+  const changetext = () => {
+    if (textRef.current.classList.contains("textcard")) {
+      textRef.current.classList.remove("textcard");
+    } else {
+      textRef.current.classList.add("textcard");
+    }
+    console.log(textRef);
+    console.log("hello text");
+  };
 
   return (
     <>
@@ -36,8 +53,14 @@ const Shop = () => {
                 <div className="card  cardbox " key={d.id}>
                   <img src={d.image} className="card-img-top image" alt="..." />
                   <div className="card-body">
-                    <h4 className="card-title">{d.title}</h4>
-                    <p className="card-text">{d.description}</p>
+                    <h4 className="card-title cardtitle">{d.title}</h4>
+                    <p
+                      className="card-text textcard "
+                      ref={textRef}
+                      onClick={changetext}
+                    >
+                      {d.description}
+                    </p>
                     <h4>{d.price}</h4>
                     <div className="mt-3 bg-danger ">
                       <button
