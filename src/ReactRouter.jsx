@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import Shop from "./Pages/Shop";
 import Order from "./Pages/Order";
@@ -11,10 +11,13 @@ export default function ReactRouter() {
   return (
     <>
       <Switch>
-        <Route exact path="/">
+        {/* <Route exact path="/">
           <Redirect to="/login"></Redirect>
+        </Route> */}
+        <Route path="/login">
+          <Login />
         </Route>
-        <Route exact path="/home">
+        <Route exact path="/">
           <Home />
         </Route>
 
@@ -27,10 +30,6 @@ export default function ReactRouter() {
         </Route>
         <Route path="/setting">
           <Setting />
-        </Route>
-
-        <Route path="/login">
-          <Login />
         </Route>
 
         <Route path="*">

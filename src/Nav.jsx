@@ -18,7 +18,7 @@ const Nav = () => {
         />
 
         <div className="d-flex col-md-5 navitems">
-          <Link className="nav-link active size  text-white" to="/home">
+          <Link className="nav-link active size  text-white" to="/">
             Home
           </Link>
           <Link

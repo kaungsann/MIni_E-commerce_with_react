@@ -89,7 +89,7 @@ const Login = () => {
       emailRef.current.value.length === 0 ||
       passRef.current.value.length === 0
     ) {
-      toast("You need cto enter fill the text");
+      toast("You need to enter fill the text");
     }
     if (
       nameRef.current.classList.contains("innvalid") &&
@@ -98,7 +98,7 @@ const Login = () => {
     ) {
       console.log(" you are login successfully");
       console.log(history);
-      history.push("/home");
+      history.push("/");
       let jsonData = {
         name: nameRef.current.value,
         email: emailRef.current.value,

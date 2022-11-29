@@ -24,7 +24,7 @@ export default function Setting() {
       <Nav />
 
       <table className=" table table-striped ">
-        <thead className="text-black bgcolor">
+        <thead className=" bgcolor">
           <tr className="tableh">
             <th>No</th>
             <th>Date</th>

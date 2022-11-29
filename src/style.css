@@ -73,9 +73,14 @@ body {
   font-size: 20px;
 }
 
-td,
-th {
+td {
   color: black;
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 20px;
+}
+th {
+  color: whitesmoke;
   text-align: center;
   padding: 15px 20px;
   font-size: 20px;
@@ -84,8 +89,8 @@ th {
   font-size: 25px;
 }
 thead {
-  background-color: #1a374d;
-  opacity: 0.5;
+  background-color: black;
+  color: white;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
@@ -166,4 +171,144 @@ table {
 }
 .buyicons {
   font-size: 35px;
+}
+.bgcolor {
+  background-color: #1a374d;
+}
+.toast {
+  background-color: #1a374d;
+}
+.shoppingitemsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 520px;
+  margin-bottom: 100px;
+}
+.itemscontainer {
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  max-width: 400px;
+
+  opacity: 0.9;
+  border-radius: 8px;
+}
+.shopimg {
+  width: 160px;
+  height: 130px;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  transition: all 0.3s ease-in-out;
+}
+.shopimg:hover {
+  transform: scale(1.1);
+}
+.shopimgbox {
+  max-width: 380px;
+}
+.imgsbox {
+  padding-right: 8px;
+  padding-bottom: 5px;
+}
+.shopbox {
+}
+.itemscontainer {
+  background-color: white;
+}
+
+.titeimg {
+  width: 350px;
+  height: 350px;
+}
+.link {
+  display: block;
+  text-decoration: none;
+}
+.titeshop {
+  padding: 25px;
+  max-width: 400px;
+  background-color: white;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.sign {
+  height: 250px;
+  background-color: white;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  padding: 20px;
+  margin-top: 80px;
+}
+.signbtn {
+  width: 320px;
+  background-color: lightseagreen;
+  border-radius: 8px;
+  padding: 7px;
+  border: none;
+}
+.signbtn:hover {
+  opacity: 0.8;
+}
+.top {
+  background-color: #232f3e;
+  color: whitesmoke;
+  padding: 15px;
+  opacity: 0.8;
+}
+.top:hover {
+  opacity: 0.9;
+}
+.topbtn {
+  display: flex;
+  justify-content: center;
+}
+.footer {
+  color: white;
+  background-color: #232f3e;
+  padding-bottom: 50px;
+}
+.none {
+}
+.last {
+  background-color: #131a22;
+  height: 180px;
+  color: white;
+}
+.textbe {
+  font-style: italic;
+  padding-top: 20px;
+  background: -webkit-linear-gradient(#406bb2, #924bed, #1a374d, #e8aa42);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.bookstore {
+  padding: 20px;
+  margin-top: 280px;
+  width: 95%;
+  border-radius: 10px;
+  background-color: white;
+  margin-bottom: 30px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+.bookimg {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  margin: 8px;
+  margin-bottom: 30px;
+  transition: all 0.4 ease-in-out;
+}
+.bookimg:hover {
+  transform: scale(1.1);
+}
+.bookimgcontainer {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
 }
