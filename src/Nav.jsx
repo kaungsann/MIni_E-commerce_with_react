@@ -19,13 +19,13 @@ const Nav = () => {
 
         <div className="d-flex col-md-5 navitems">
           <Link className="nav-link active size  text-white" to="/">
-            Home
+            Top Categories
           </Link>
           <Link
             className="nav-link  active size  d-flex text-white"
             to="/order"
           >
-            Order
+            Top Deal
           </Link>
           <Link className="nav-link active size text-white" to="/shop">
             Shopping
@@ -35,7 +35,7 @@ const Nav = () => {
             to="/setting"
           >
             <FaShoppingCart className="buyicons" />
-            <div className=" boxno">{card.add.length}</div>
+            <div className=" boxno">{card.add.length} Cart</div>
           </Link>
         </div>
       </div>

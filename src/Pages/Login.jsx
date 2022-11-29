@@ -165,6 +165,12 @@ const Login = () => {
           Login
         </button>
       </div>
+      <button
+        className="backbtn btn btn-outline-primary"
+        onClick={() => history.goBack()}
+      >
+        Go Back
+      </button>
     </Fragment>
   );
 };

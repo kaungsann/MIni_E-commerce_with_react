@@ -272,8 +272,7 @@ table {
   background-color: #232f3e;
   padding-bottom: 50px;
 }
-.none {
-}
+
 .last {
   background-color: #131a22;
   height: 180px;
@@ -311,4 +310,45 @@ table {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: scroll;
+  overflow-y: hidden;
+}
+.backbtn {
+  margin-top: 100px;
+  margin-left: 50px;
+  width: 120px;
+  padding: 6px;
+}
+.shopping {
+  width: 100%;
+  height: 450px;
+}
+.underline {
+  text-decoration: line-through;
+  color: darkgrey;
+}
+.shirt {
+  width: 200px;
+  height: 200px;
+}
+.text {
+  color: #f36e2d;
+}
+.shirtcontainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cardshirt {
+  padding: 40px;
+  margin-top: 5px;
+  width: 300px;
+  height: 400px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
