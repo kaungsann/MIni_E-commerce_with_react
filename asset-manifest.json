@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/e-commerce/static/css/main.d68843ef.css",
+    "main.js": "/e-commerce/static/js/main.b48fa503.js",
+    "static/media/shop3.jpg": "/e-commerce/static/media/shop3.770aace88b4393b74492.jpg",
+    "static/media/shop.jpg": "/e-commerce/static/media/shop.87ca6fc75f337f0ac5ba.jpg",
+    "static/media/shop1.jpg": "/e-commerce/static/media/shop1.892dfdeab7ec9f76b169.jpg",
+    "static/media/shop2.jpg": "/e-commerce/static/media/shop2.4cf01f00ecc7b2ddce89.jpg",
+    "static/media/girlshop.jpg": "/e-commerce/static/media/girlshop.062f5ef967cbda8057bb.jpg",
+    "static/media/tool.jpg": "/e-commerce/static/media/tool.d323b59566a7058de5e3.jpg",
+    "static/media/fitness.jpg": "/e-commerce/static/media/fitness.5901a2c972ae0994018b.jpg",
+    "static/media/arrival.jpg": "/e-commerce/static/media/arrival.bb8447bebcc2c72f5830.jpg",
+    "static/media/what.jpg": "/e-commerce/static/media/what.d2170d6e4869a72a8c57.jpg",
+    "static/media/bent.jpg": "/e-commerce/static/media/bent.9cfbfabf8cdd6b74ae40.jpg",
+    "static/media/NikeTshirt.jpg": "/e-commerce/static/media/NikeTshirt.8248eb39e88bd160e020.jpg",
+    "static/media/kindle.jpg": "/e-commerce/static/media/kindle.528004afedbffb53d5db.jpg",
+    "index.html": "/e-commerce/index.html",
+    "main.d68843ef.css.map": "/e-commerce/static/css/main.d68843ef.css.map",
+    "main.b48fa503.js.map": "/e-commerce/static/js/main.b48fa503.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d68843ef.css",
+    "static/js/main.b48fa503.js"
+  ]
+}
